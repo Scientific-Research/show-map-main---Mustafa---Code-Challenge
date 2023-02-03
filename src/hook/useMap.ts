@@ -51,6 +51,31 @@ export const useMap = (container: React.RefObject<HTMLDivElement>) => {
       mapInitRef.current?.off("dblclick", generateNewMarker);
     };
   }, []);
+  /////////////////////////
+  useEffect(() => {
+    mapInitRef2.current &&
+      mapInitRef2.current.on("dblclick", ({ lngLat }) =>
+        generateNewMarker({ map: mapInitRef2.current!, ...lngLat })
+      );
+
+    return () => {
+      mapInitRef2.current?.off("dblclick", generateNewMarker);
+    };
+  }, []);
+  ////////////////////////////////
+
+  /////////////////////////
+  useEffect(() => {
+    mapInitRef3.current &&
+      mapInitRef3.current.on("dblclick", ({ lngLat }) =>
+        generateNewMarker({ map: mapInitRef3.current!, ...lngLat })
+      );
+
+    return () => {
+      mapInitRef3.current?.off("dblclick", generateNewMarker);
+    };
+  }, []);
+  ////////////////////////////////
 
   useEffect(() => {
     mapInitRef.current &&
@@ -65,4 +90,35 @@ export const useMap = (container: React.RefObject<HTMLDivElement>) => {
       mapInitRef.current?.off("load", generateNewMarker);
     };
   }, []);
+  ////////////////////////////////
+  useEffect(() => {
+    mapInitRef2.current &&
+      mapInitRef2.current.on("load", () =>
+        generateNewMarker({
+          map: mapInitRef2.current!,
+          ...mapInitRef2.current!.getCenter(),
+        })
+      );
+
+    return () => {
+      mapInitRef2.current?.off("load", generateNewMarker);
+    };
+  }, []);
+  ///////////////////////////////
+
+  ////////////////////////////////
+  useEffect(() => {
+    mapInitRef3.current &&
+      mapInitRef3.current.on("load", () =>
+        generateNewMarker({
+          map: mapInitRef3.current!,
+          ...mapInitRef3.current!.getCenter(),
+        })
+      );
+
+    return () => {
+      mapInitRef3.current?.off("load", generateNewMarker);
+    };
+  }, []);
+  ///////////////////////////////
 };
