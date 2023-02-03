@@ -5,9 +5,9 @@ import { Profile } from './components/Profile';
 const App = () => {
   return (
     <div>
-        <Title/>
+        {/* <Title/> */}
         <MapView/>
-        <Profile/>
+        {/* <Profile/> */}
     </div>
   )
 }
