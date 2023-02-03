@@ -14,7 +14,7 @@ export const initMap = (
   const map = new Map({
     container,
     // style: 'mapbox://styles/mapbox/dark-v10',
-    style: "mapbox://styles/mapbox/streets-v11",
+    style: "mapbox://styles/mapbox/streets-v12",
     pitchWithRotate: false,
     center: coords,
     zoom: 7,
