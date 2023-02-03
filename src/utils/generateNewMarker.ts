@@ -10,3 +10,13 @@ export const generateNewMarker = ({ lat, lng, map }: { lng: number, lat: number,
         .setPopup(popUp)
         .addTo(map)
 }
+new Marker({ color: '#63df29', scale: 2.5 })
+.setLngLat([lng, lat])
+.setPopup(popUp)
+.addTo(map)
+}
+new Marker({ color: '#63df29', scale: 2.5 })
+.setLngLat([lng, lat])
+.setPopup(popUp)
+.addTo(map)
+}
