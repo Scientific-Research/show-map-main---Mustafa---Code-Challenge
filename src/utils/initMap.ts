@@ -17,7 +17,7 @@ export const initMap = (
     style: "mapbox://styles/mapbox/streets-v12",
     pitchWithRotate: false,
     center: coords,
-    zoom: 7,
+    zoom: 6,
     accessToken: VITE_KEY as string,
     doubleClickZoom: false,
     // fitBounds:{GERMANY_BOUNDS},
