@@ -9,6 +9,8 @@ const { VITE_KEY } = getEnvironments();
 // ];
 export const initMap = (
   container: HTMLDivElement,
+  coords1: [number, number],
+  // coords: [[number, number], [number, number]]
   coords: [number, number]
 ) => {
   const map = new Map({
@@ -17,7 +19,10 @@ export const initMap = (
     style: "mapbox://styles/mapbox/streets-v12",
     pitchWithRotate: false,
     center: coords,
-    zoom: 6,
+    // center: coords,
+
+    // center:coords1,
+    zoom: 5,
     accessToken: VITE_KEY as string,
     doubleClickZoom: false,
     // fitBounds:{GERMANY_BOUNDS},
